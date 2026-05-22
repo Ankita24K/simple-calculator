@@ -11,15 +11,21 @@
   <input type="number" id="num2" placeholder="Second number">
 
   <br><br>
-
   <button onclick="calculate('+')">Add</button>
   <button onclick="calculate('-')">Subtract</button>
   <button onclick="calculate('*')">Multiply</button>
   <button onclick="calculate('/')">Divide</button>
+  <button onclick="clearFields()">Clear</button>
+
 
   <h2 id="result"></h2>
 
   <script>
+function clearFields() {
+  document.getElementById("num1").value = "";
+  document.getElementById("num2").value = "";
+  document.getElementById("result").innerText = "";
+}
     function calculate(operator) {
       let num1 = parseFloat(document.getElementById("num1").value);
       let num2 = parseFloat(document.getElementById("num2").value);
